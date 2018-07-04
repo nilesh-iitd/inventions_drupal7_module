@@ -4,7 +4,7 @@ Displays the list of Inventions
 
 # Pre-requisite:
 
-* None
+* Drupal 7.54 or above
 
 # Installation:
 
