@@ -1,2 +1,7 @@
 # inventions_drupal7_module
-Inventions module displays list of inventions
+
+Displays the list of Inventions
+
+# Pre-requisite:
+
+* None
