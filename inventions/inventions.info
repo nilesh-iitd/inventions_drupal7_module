@@ -1,0 +1,6 @@
+
+name = Inventions
+description = List the today's inventions
+core = 7.x
+package = VicUni
+dependencies[] = block

@@ -1,0 +1,19 @@
+<?php
+
+function inventions_install() {
+  variable_set(
+    'inventions_data', 
+    array(
+        array('invention_title'=>'Title 5', 'invention_updated_date'=>'04-Jul-2018','invention_summary'=>'Biological invention'),
+        array('invention_title'=>'Title 4', 'invention_updated_date'=>'03-Jul-2018','invention_summary'=>'Computational invention'),
+        array('invention_title'=>'Title 3', 'invention_updated_date'=>'02-Jul-2018','invention_summary'=>'Technological invention'),
+        array('invention_title'=>'Title 2', 'invention_updated_date'=>'01-Jul-2018','invention_summary'=>'Medical invention'),
+        array('invention_title'=>'Title 1', 'invention_updated_date'=>'30-Jun-2018','invention_summary'=>'Social invention')
+        )
+  );
+}
+
+
+function inventions_uninstall() {
+  variable_del('inventions_data');
+}

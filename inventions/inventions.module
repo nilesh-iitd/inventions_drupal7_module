@@ -1,0 +1,42 @@
+<?php
+
+function inventions_block_info() {
+  $blocks = array();
+  $blocks['inventions_block'] = array(
+    'info' => t('Block: Inventions'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+
+function inventions_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'inventions_block':
+      $inventions_data = variable_get('inventions_data');
+
+      $block['content'] = theme(
+        'inventions',
+        array(
+          'data' => $inventions_data,
+        )
+      );
+      break;
+  }
+  return $block;
+}
+
+
+function inventions_theme() {
+  return array(
+    'inventions' => array(
+      'template' => 'inventions',
+      'path' => drupal_get_path('module', 'inventions') . '/templates',
+      'variables' => array(
+        'data' => NULL,
+      ),
+    ),
+  );
+}
